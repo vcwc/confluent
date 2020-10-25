@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+prefix="package_confluent_cc_sasl_$2"
+
+
+executionplane --silent docker container prune --force
+

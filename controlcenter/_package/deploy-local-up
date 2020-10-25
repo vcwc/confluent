@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+
+prefix="package_confluent_cc_$2"
+

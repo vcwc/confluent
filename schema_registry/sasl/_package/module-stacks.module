@@ -1,0 +1,3 @@
+boot/shutdown,schema_registry_sasl,schema_registry_sasl,schema_registry_sasl
+start/stop,schema_registry_sasl,schema_registry_sasl,schema_registry_sasl_ext_rest
+

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+
+prefix="package_schema_registry_$2"
+
