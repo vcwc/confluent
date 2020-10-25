@@ -1,3 +1,3 @@
-# `vcwc/elastic/metricbeat` - External Build
+# `vcwc/confluent/kafka_connect` - External Build
 
-The Official ElasticSearch Metricbeat image with amended entrypoint.
+The Official Confluent Kafka Connect image with amended entrypoint.
