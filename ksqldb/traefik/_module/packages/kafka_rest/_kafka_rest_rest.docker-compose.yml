@@ -1,0 +1,25 @@
+---
+version: '3'
+services:
+
+# START SERVICE vcwc/nginx/rewrite
+  nginx:
+    image: ${VCW_REGISTRY}vcwc/nginx.base:1.19.3
+    environment: ['VCW_STACK_NGINX_CONF_LOCATION=${KAFKA_REST_REST_ENVIRONMENT_CONF_PATH}', 'VCW_STACK_NGINX_CONF_PROXY_PASS=${KAFKA_REST_REST_ENVIRONMENT_CONF_UPSTREAM}']
+    command: []
+    volumes: ['${VCW_STACK_GLOBAL_STACKPREFIX}_nginx_config_volume:/vcw/pwd']
+    ports: []
+    networks: [${VCW_STACK_GLOBAL_NETWORKGLOBAL}_overlay, ${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay]
+    deploy:
+      mode: replicated
+      resources:
+        limits:
+          memory: '${KAFKA_REST_REST_DEPLOY_RESOURCES_LIMITS_MEMORY}'
+        reservations:
+          memory: '${KAFKA_REST_REST_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+${KAFKA_REST_REST_COMPOSE_EXTENSIONS}
+# END SERVICE vcwc/nginx/rewrite
+
+networks: {${VCW_STACK_GLOBAL_NETWORKGLOBAL}_overlay: { external: true }, ${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay: { external: true }}
+volumes: {${VCW_STACK_GLOBAL_STACKPREFIX}_nginx_config_volume: { external: true }}
+${VCW_STACK_GLOBAL_COMPOSE_EXTENSIONS}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+prefix="vcwc_confluent_controlcenter_sasl__$1"
+prefix="vcwc_confluent_controlcenter_sasl__$1"

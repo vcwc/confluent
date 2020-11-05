@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+prefix="vcwc_confluent_ksqldb_traefik__$1"
+prefix="vcwc_confluent_ksqldb_traefik__$1"
+
+if [[ "vcwc_confluent_ksqldb_traefik__kafka_rest_ksql_server_queries_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_ksqldb_traefik__kafka_rest_ksql_server_queries_volume
+fi

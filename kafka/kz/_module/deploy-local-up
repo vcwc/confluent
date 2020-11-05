@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+prefix="vcwc_confluent_kafka_kz__$1"
+prefix="vcwc_confluent_kafka_kz__$1"
+
+if [[ "vcwc_confluent_kafka_kz__kz_kafka_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_kafka_kz__kz_kafka_secrets_volume
+fi
+
+if [[ "vcwc_confluent_kafka_kz__kz_kafka_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_kafka_kz__kz_kafka_data_volume
+fi
+
+if [[ "vcwc_confluent_kafka_kz__kz_zookeeper_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_kafka_kz__kz_zookeeper_secrets_volume
+fi
+
+if [[ "vcwc_confluent_kafka_kz__kz_zookeeper_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_kafka_kz__kz_zookeeper_data_volume
+fi
+
+if [[ "vcwc_confluent_kafka_kz__kz_zookeeper_log_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_kafka_kz__kz_zookeeper_log_volume
+fi

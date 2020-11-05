@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-export SOLECO_HOSTNAME="${DOLLAR}{CONTECO_HOSTNAME}"

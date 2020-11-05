@@ -1,0 +1,5 @@
+kz_kafka_secrets_volume
+kz_kafka_data_volume
+kz_zookeeper_secrets_volume
+kz_zookeeper_data_volume
+kz_zookeeper_log_volume

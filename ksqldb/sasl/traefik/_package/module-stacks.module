@@ -1,3 +1,0 @@
-boot/shutdown,ksqldb_sasl,ksqldb_sasl,ksqldb_sasl
-start/stop,ksqldb_sasl,ksqldb_sasl,ksqldb_sasl_rest_ksql_server
-

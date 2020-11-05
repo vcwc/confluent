@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-
-prefix="package_kafka_rest_$2"
-

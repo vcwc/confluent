@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+prefix="vcwc_confluent_ksqldb__$1"
+prefix="vcwc_confluent_ksqldb__$1"
+
+if [[ "vcwc_confluent_ksqldb__kafka_rest_ksqldb_queries_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_ksqldb__kafka_rest_ksqldb_queries_volume
+fi
+
+if [[ "vcwc_confluent_ksqldb__kafka_rest_ksqldb_queries_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker run -v vcw_controlplane_repos:/source -v vcwc_confluent_ksqldb__kafka_rest_ksqldb_queries_volume:/vcw/pwd ${VCW_REGISTRY}vcwc/controlplane.vcw console cmd tar -C / -xvf /source/vcwc/confluent/ksqldb/_module/volumes/kafka_rest_ksqldb_queries_volume.tar
+fi

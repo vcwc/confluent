@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+prefix="vcwc_confluent_schema_registry__$1"
+prefix="vcwc_confluent_schema_registry__$1"
+
+if [[ "vcwc_confluent_schema_registry__schema_registryz_schema_registry_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create vcwc_confluent_schema_registry__schema_registryz_schema_registry_secrets_volume
+fi

@@ -9,7 +9,7 @@ services:
     command: []
     volumes: []
     ports: [${VCW_STACK_CONFLUENT_CC_PORTS}]
-    networks: [${VCW_STACK_NETWORKLOCAL}_overlay]
+    networks: [${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay]
     deploy:
       mode: replicated
       resources:
@@ -20,6 +20,6 @@ services:
 ${VCW_STACK_CONFLUENT_CC_COMPOSE_EXTENSIONS}
 # END SERVICE vcwc/confluent/controlcenter/sasl
 
-networks: {${VCW_STACK_NETWORKLOCAL}_overlay: { external: true }}
+networks: {${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay: { external: true }}
 volumes: {}
 ${VCW_STACK_GLOBAL_COMPOSE_EXTENSIONS}
